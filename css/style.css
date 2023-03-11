@@ -1,6 +1,254 @@
-header {
-  background-color: red; }
-  header p {
-    color: blue; }
-  header h2 {
-    color: green; }
+@charset "UTF-8";
+/* reset de estilos */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+ul,
+ol,
+li {
+  list-style: none; }
+
+.galeria img, .tienda img {
+  transition: 0.5s;
+  filter: blur(3px); }
+  .galeria img:hover, .tienda img:hover {
+    filter: blur(0);
+    transform: scale(1.05, 1.05); }
+
+/* HEADER */
+.header {
+  background-color: #467916;
+  font-family: "Poppins", sans-serif;
+  top: 0;
+  z-index: 2; }
+  .header p {
+    display: flex;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-decoration: underline; }
+  .header nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px; }
+    .header nav a {
+      color: #000000; }
+    .header nav ul {
+      display: flex; }
+
+/* FOOTER */
+footer {
+  background-color: #741111;
+  display: flex;
+  height: 200px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center; }
+  footer .redes {
+    color: #ffffff;
+    order: 2;
+    align-self: flex-end; }
+  footer .medida {
+    order: 1;
+    color: #ffffff; }
+
+main {
+  background-color: #000000;
+  height: 100%;
+  padding-bottom: 20px; }
+  main .colorBanner {
+    width: 100%;
+    height: 500px;
+    font-family: "Roboto", sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/img/apocalipsis-zombie.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    font-size: 70px;
+    font-weight: bold;
+    font-style: normal;
+    /**text*/
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px #000000; }
+  main .colorTituloSecundario {
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    background-position: center;
+    font-size: 30px;
+    background-color: #1e7916;
+    text-align: center;
+    font-weight: lighter;
+    font-style: normal;
+    padding: 20px; }
+    main .colorTituloSecundario p {
+      font-size: 20px; }
+
+/* INDEX */
+.sectionReseña {
+  /**text*/
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: lighter;
+  font-style: normal;
+  margin: 30px; }
+  .sectionReseña p:hover {
+    color: aqua; }
+  .sectionReseña .reseña {
+    display: flex;
+    justify-content: center;
+    text-decoration: underline; }
+  .sectionReseña .card {
+    display: flex;
+    gap: 30px;
+    background-color: #8f8c8c;
+    border-radius: 1%;
+    margin-bottom: 10px;
+    padding: 30px;
+    align-items: center;
+    flex-direction: row; }
+    .sectionReseña .card .imagen {
+      border-radius: 50%;
+      width: 300px;
+      height: 300px; }
+
+/* CONOCENOS */
+.mapa {
+  display: flex;
+  color: #ffffff;
+  padding: 10px;
+  gap: 30px; }
+  .mapa p {
+    display: flex;
+    background-color: #4d0f0f;
+    font-family: "Poppins", sans-serif;
+    background-position: left;
+    font-size: 20px; }
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 10px;
+  padding: 30px;
+  grid-template-areas: "f1 f1 f2" "f1 f1 f2" "f4 f3 f3" "f5 f9 f6" "f7 f8 f8"; }
+  .galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  .galeria .f1 {
+    grid-area: f1; }
+  .galeria .f2 {
+    grid-area: f2; }
+  .galeria .f3 {
+    grid-area: f3; }
+  .galeria .f4 {
+    grid-area: f4; }
+  .galeria .f5 {
+    grid-area: f5; }
+  .galeria .f6 {
+    grid-area: f6; }
+  .galeria .f7 {
+    grid-area: f7; }
+  .galeria .f8 {
+    grid-area: f8; }
+  .galeria .f9 {
+    grid-area: f9;
+    display: flex;
+    color: #ffffff;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center; }
+
+.colorSection {
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  text-decoration: underline;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: lighter; }
+
+.tienda {
+  display: flex;
+  gap: 20px;
+  padding: 20px; }
+  .tienda img {
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    flex-wrap: wrap; }
+
+.fondo {
+  background-color: #4d0f0f; }
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .tienda {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media (max-width: 768px) {
+  /* INDEX */
+  .card {
+    flex-direction: column; }
+  /* TIENDA */
+  .tienda {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media (max-width: 425px) {
+  .card {
+    flex-direction: column; }
+  /* CONOCENOS */
+  .mapa {
+    display: flex;
+    flex-direction: column; }
+    .mapa .mapaImg {
+      width: 100%; }
+  /* TIENDA */
+  .tienda {
+    display: flex;
+    flex-direction: column; }
+  /* GALERIA */
+  .galeria {
+    display: flex;
+    flex-direction: column; } }
+
+@media (max-width: 320px) {
+  /* HEADER */
+  ul {
+    flex-direction: column; }
+  /*  INDEX  */
+  .card {
+    flex-direction: column;
+    font-size: 15px; }
+    .card .imagen {
+      width: 100%; }
+  .colorBanner {
+    height: 300px; }
+  .colorTituloSecundario h2 {
+    font-size: 26px; }
+  /*  TIENDA  */
+  .tienda {
+    display: flex;
+    flex-direction: column; }
+  /* CONOCENOS  */
+  .mapa {
+    flex-direction: column; }
+    .mapa .mapaImg {
+      width: 100%;
+      height: 100%; }
+  /* GALERIA */
+  .galeria {
+    display: flex;
+    flex-direction: column; } }

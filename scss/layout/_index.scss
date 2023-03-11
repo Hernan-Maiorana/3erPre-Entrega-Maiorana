@@ -1,0 +1,37 @@
+/* INDEX */
+.sectionReseña {
+    /**text*/
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: lighter;
+    font-style: normal;
+    margin: 30px;
+
+    p:hover {
+        color: aqua;
+    }
+
+    .reseña {
+        display: flex;
+        justify-content: center;
+        text-decoration: underline;
+    }
+
+    .card {
+        display: flex;
+        gap: 30px;
+        background-color: #8f8c8c;
+        border-radius: 1%;
+        margin-bottom: 10px;
+        padding: 30px;
+        align-items: center;
+        flex-direction: row;
+
+        .imagen {
+            border-radius: 50%;
+            @include imagen(300px,300px);
+        }
+    }
+
+}

@@ -1,0 +1,22 @@
+.colorSection {
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  text-decoration: underline;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: lighter;
+}
+
+.tienda {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+
+  img {
+    @include imagen(100%, 300px);
+    border-radius: 20px;
+    flex-wrap: wrap;
+    @extend %hover;
+  }
+}

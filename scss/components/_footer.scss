@@ -1,0 +1,21 @@
+/* FOOTER */
+footer {
+    background-color: #741111;
+    display: flex;
+    height: 200px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    .redes {
+        color: #ffffff;
+        order: 2;
+        align-self: flex-end;
+    }
+
+    .medida {
+        order: 1;
+        color: #ffffff;
+    }
+
+}
