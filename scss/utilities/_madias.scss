@@ -1,4 +1,18 @@
 /* RESPONSIVE */
+@media (min-width: 1024px) {
+    .tienda {
+        display: flex;
+    }
+
+    .card {
+        flex-direction: row;
+
+        .imagen {
+            @include imagen(300px, 300px);
+        }
+    }
+}
+
 @media (max-width: 1024px) {
 
     .tienda {
@@ -6,6 +20,13 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .card {
+        flex-direction: row;
+    }
+
+    .imagen {
+        @include imagen(300px, 300px);
+    }
 }
 
 @media (max-width: 768px) {
@@ -19,6 +40,10 @@
     .tienda {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .colorBanner {
+        font-size: 30px;
     }
 }
 
@@ -48,6 +73,10 @@
         display: flex;
         flex-direction: column;
     }
+
+    .imagen {
+        @include imagen(100%, 300px);
+    }
 }
 
 @media (max-width: 320px) {
@@ -62,9 +91,6 @@
         flex-direction: column;
         font-size: 15px;
 
-        .imagen {
-            width: 100%;
-        }
     }
 
     .colorBanner {

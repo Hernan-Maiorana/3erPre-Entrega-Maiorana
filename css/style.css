@@ -73,7 +73,6 @@ main {
     background-image: url(../assets/img/apocalipsis-zombie.jpg);
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    font-size: 70px;
     font-weight: bold;
     font-style: normal;
     /**text*/
@@ -114,12 +113,9 @@ main {
     border-radius: 1%;
     margin-bottom: 10px;
     padding: 30px;
-    align-items: center;
-    flex-direction: row; }
+    align-items: center; }
     .sectionReseña .card .imagen {
-      border-radius: 50%;
-      width: 300px;
-      height: 300px; }
+      border-radius: 50%; }
 
 /* CONOCENOS */
 .mapa {
@@ -192,10 +188,24 @@ main {
   background-color: #4d0f0f; }
 
 /* RESPONSIVE */
+@media (min-width: 1024px) {
+  .tienda {
+    display: flex; }
+  .card {
+    flex-direction: row; }
+    .card .imagen {
+      width: 300px;
+      height: 300px; } }
+
 @media (max-width: 1024px) {
   .tienda {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  .card {
+    flex-direction: row; }
+  .imagen {
+    width: 300px;
+    height: 300px; } }
 
 @media (max-width: 768px) {
   /* INDEX */
@@ -204,7 +214,9 @@ main {
   /* TIENDA */
   .tienda {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .colorBanner {
+    font-size: 30px; } }
 
 @media (max-width: 425px) {
   .card {
@@ -222,7 +234,10 @@ main {
   /* GALERIA */
   .galeria {
     display: flex;
-    flex-direction: column; } }
+    flex-direction: column; }
+  .imagen {
+    width: 100%;
+    height: 300px; } }
 
 @media (max-width: 320px) {
   /* HEADER */
@@ -232,8 +247,6 @@ main {
   .card {
     flex-direction: column;
     font-size: 15px; }
-    .card .imagen {
-      width: 100%; }
   .colorBanner {
     height: 300px; }
   .colorTituloSecundario h2 {
